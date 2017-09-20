@@ -66,11 +66,7 @@ def play(board)
   counter = 0
   while counter < 9
     if over?(board)
-      if draw?(board)
-        puts "Cat's Game!"
-      else won?(board) != false
-        puts "Congratulations #{winner(board)}"
-      end
+      
     else
       turn(board)
       counter += 1
