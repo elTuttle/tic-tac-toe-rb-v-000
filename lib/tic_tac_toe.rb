@@ -129,7 +129,6 @@ end
 
 def winner(board)
   win_combo = won?(board)
-  puts win_combo
   if win_combo == false
     return nil
   elsif board[win_combo[0]] == "X"
