@@ -67,8 +67,10 @@ def play(board)
     if over?(board)
       if draw?(board)
         puts "Cat's Game!"
+        counter = 10
       else won?(board) != false
         puts "Congratulations #{winner(board)}"
+        counter =10
       end
     else
       turn(board)
