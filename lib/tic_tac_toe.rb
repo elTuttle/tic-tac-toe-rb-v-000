@@ -32,8 +32,7 @@ def turn(board)
       move(board, index, "X")
       display_board(board)
   else
-    puts "Please enter 1-9:"
-    input = gets.strip
+    turn(board)
   end
 
 end
@@ -65,8 +64,12 @@ end
 def play(board)
   counter = 0
   while counter < 9
-    if over?(board) == true
-
+    if over?(board)
+      if draw?(board)
+        puts "Cat's Game!"
+      else won?(board) != false
+        puts "Congratulations #{winner(board)}"
+      end
     else
       turn(board)
       counter += 1
